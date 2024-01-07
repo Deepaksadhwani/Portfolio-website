@@ -247,14 +247,19 @@
   position: absolute;
   font-weight: 600;
   justify-content: right;
+  opacity: 0;
 }
 
-.project-number-left {
+.project-card:hover .project-number {
+  opacity: 1;
+}
+
+.project-number-right {
   right: -40px;
   top: -45px;
 }
 
-.project-number-right {
+.project-number-left {
   left: -45px;
   top: -45px;
 }
@@ -271,29 +276,146 @@
   transition: all 0.4s;
 }
 
-.project-content-left{
+.project-content-left {
   left: 10%;
 }
 
-.project-content-ri{
+.project-content-ri {
   right: 10%;
 }
 
-.project-skills-container{
-    width: 60%;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.project-skills-container {
+  width: 60%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-
-.project-skill{
-    width: 40px;
+.project-skill {
+  width: 40px;
 }
 
+.project-heading {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 3rem;
+}
 
-.project-heading{
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 3rem;
+.project-subheading {
+  width: 70%;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.btn-grp {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.btn-poject:hover {
+  border: none;
+}
+
+.icon {
+  cursor: pointer;
+  color: white;
+  font-size: 35px;
+  transition: 0.4s;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.project-card:hover .project-content {
+  transform: scale(1.1);
+}
+
+#project1 {
+  background-image: url(./Images/project/train.png);
+}
+
+#project2 {
+  margin-left: 120px;
+  background-image: url(./Images/project/silhouette_night_starry_sky_137292_3840x2160.jpg);
+}
+
+#project3 {
+  background-image: url(./Images/project/universe.png);
+}
+
+#project4 {
+  background-image: url(Images/project/sunset.png);
+  margin-left: 120px;
+}
+
+@media (max-width: 1300px) {
+  .page-header {
+    padding-top: 30px;
+    color: red;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .project-container {
+    padding: 5px;
+    margin: 10px;
+    gap: 60px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .project-card {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .project-content {
+    scale: 0.5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .project-content-left {
+    left: 0;
+  }
+
+  .project-heading {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .project-subheading {
+    width: 100%;
+  }
+
+  #project2 {
+    margin-left: 0;
+  }
+
+  #project4 {
+    margin-left: 0;
+  }
+
+  .project-skills-container {
+    width: 100%;
+  }
+
+  .project-skill {
+    width: 35px;
+  }
+
+  .project-card:hover .project-number {
+    display: none;
+  }
+
+  .project-card:hover .project-content {
+    scale: 0.55;
+  }
 }
